@@ -81,7 +81,7 @@ The previous decision of using Spark also helps here. Spark is made for distribu
 
 ### Installation
 1. `python -m venv venv`
-2. `source venv/bin/activate` (ou `.\venv\Scripts\activate` no Windows)
+2. `source venv/bin/activate` 
 3. `pip install -r requirements.txt`
 
 ### Execution
