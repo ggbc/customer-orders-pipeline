@@ -80,6 +80,7 @@ The previous decision of using Spark also helps here. Spark is made for distribu
 ### Prerequisites
 - Python 3.8+
 - Java 8 or 11 (set on `JAVA_HOME` environment variable)
+- Docker 
 
 ### Installation
 1. `python -m venv venv`
