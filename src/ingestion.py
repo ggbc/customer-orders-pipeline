@@ -1,5 +1,6 @@
 from pyspark.sql import functions as F
-from src.utils import get_logger
+from logging import Logger
+import utils
 
 class DataIngestor:
     def __init__(self, logger : Logger, spark):

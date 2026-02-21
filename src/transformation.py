@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from pyspark.sql import DataFrame
 from pyspark.sql.functions import col, lower, trim, when, to_date, to_timestamp, sha2
+from logging import Logger
 
 
 class DataTransformer(ABC):

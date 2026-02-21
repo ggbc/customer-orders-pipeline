@@ -2,8 +2,9 @@ from pyspark.sql import SparkSession, DataFrame
 from pyspark.sql.functions import col, lower, trim, when, to_date, to_timestamp, sha2, lit
 from abc import ABC, abstractmethod
 import os, logging
-import DataIngestor
-import CustomerTransformer, OrderTransformer, EventTransformer
+from ingestion import DataIngestor
+from transformation import CustomerTransformer, OrderTransformer, EventTransformer
+import utils
 
 # Configuring logs for monitoring and debugging 
 logging.basicConfig(level=logging.INFO)
@@ -50,7 +51,7 @@ class DataPipeline:
 # PIPELINE EXECUTION
 #------------------------------------------------------------------
 if __name__ == "__main__":
-    spark_session = get_spark_session()
+    spark_session = utils.get_spark_session()
 
     pipeline = DataPipeline(spark_session)
     pipeline.run()
